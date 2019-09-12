@@ -4,7 +4,8 @@ int main(void)
 {
     init_mem(PAGE_NUMBER);
     mem_dump();
-    testing(2);
+    remove(SWAP_FILE);
+    testing(400, 100);
     mem_dump();
     return (0);
 }

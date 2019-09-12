@@ -9,7 +9,8 @@ SRC =	main.c			\
 		init_mem.c		\
 		mem_dump.c		\
 		testing.c		\
-		nru.c
+		nru.c			\
+		save_swap.c
 
 SRCS = $(addprefix $(SRC_DIR)/,$(SRC))
 

@@ -9,6 +9,7 @@
 # include <stdbool.h>
 
 # define PAGE_NUMBER 10
+# define SWAP_FILE	"swap"
 
 typedef	struct		s_physical_page
 {
@@ -21,14 +22,14 @@ typedef struct  	s_virtual_page
 	
 	bool			reference;
 	bool			modify;
-	bool			presence;
 }               	t_virtual_page;
 
 t_virtual_page		*g_mem;
 
 void    			init_mem(int num_pages);
+void    			save_swap(t_virtual_page *page);
 void    			mem_dump(void);
-void    			testing(int num_of_iteration);
-void   				NRU(int random_num);
+void    			testing(int num_of_iteration, int system_timer);
+t_virtual_page  	*choose_page(void);
 
 #endif
