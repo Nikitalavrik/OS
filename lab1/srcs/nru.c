@@ -44,8 +44,8 @@ t_virtual_page  *choose_page(void)
         page = check_bits(func_1_0);
         page = !page ? check_bits(func_1_1) : page;
         save_swap(page);
+        page->modify = 0;
+        page->reference = 0;
     }
-    page->modify = rand() % 2;
-    page->reference = rand() % 2;
     return(page);
 }

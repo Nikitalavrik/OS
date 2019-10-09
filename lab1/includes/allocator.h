@@ -19,7 +19,7 @@ typedef	struct		s_physical_page
 typedef struct  	s_virtual_page
 {
 	t_physical_page	*physizal_page;
-	
+	int				id;
 	bool			reference;
 	bool			modify;
 }               	t_virtual_page;

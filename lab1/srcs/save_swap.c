@@ -10,6 +10,6 @@ void    save_swap(t_virtual_page *page)
         printf("No file\n");
         exit(1);
     }
-    fprintf(fptr, "phys addr = %p\nR = %i M = %i\n",
-    page->physizal_page, page->reference, page->modify);
+    fprintf(fptr, "SWAP id = %i, phys addr = %p\nR = %i M = %i\n",
+    page->id, page->physizal_page, page->reference, page->modify);
 }

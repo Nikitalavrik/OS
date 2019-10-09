@@ -19,6 +19,8 @@ void    testing(int num_of_iteration, int system_timer)
     for (i; i < num_of_iteration; i++)
     {
         page = choose_page();
+        page->reference = 1;
+        page->modify = rand() % 2;
         if (i == system_timer)
         {
             free_reference();
